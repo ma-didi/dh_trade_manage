@@ -33,7 +33,7 @@
         <!--设置类型别名-->
         <property name="typeAliasesPackage" value="com.giao.ssm.pojo"></property>
         <!-- 指定mybatis，mapper文件的位置 -->
-        <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+        <property name="mapperLocations" value="classpath:mapper/**/*.xml"></property>
         <property name="plugins" ref="paginationInterceptor"/>
     </bean>
 

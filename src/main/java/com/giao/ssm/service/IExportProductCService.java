@@ -1,6 +1,6 @@
 package com.giao.ssm.service;
 
-import com.giao.ssm.entity.ExportC;
+import com.giao.ssm.entity.ExportProductC;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,8 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author liuchang
  * @since 2020-10-11
  */
-public interface IExportCService extends IService<ExportC> {
-
-    int exportAndInsert(String[] contractids);
+public interface IExportProductCService extends IService<ExportProductC> {
 
 }
