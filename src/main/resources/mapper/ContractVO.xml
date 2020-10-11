@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.giao.ssm.mapper.ContractCMapper">
+
+    <resultMap id="contractC" type="com.giao.ssm.pojo.vo.ContractCVO">
+        <id column="CONTRACT_ID" property="contractId" jdbcType="VARCHAR"/>
+        <result column="CUSTOM_NAME" property="customName"/>
+        <result column="CONTRACT_NO" property="contractNo"/>
+        <result column="INPUT_BY" property="inputBy"/>
+        <result column="CHECK_BY" property="checkBy"/>
+        <result column="INSPECTOR" property="insprctor"/>
+        <result column="SIGNING_DATE" property="signingDate"/>
+        <result column="DELIVERY_PERIOD" property="deliveryPeriod"/>
+        <result column="SHIP_TIME" property="shipTime"/>
+        <result column="TOTAL_AMOUNT" property="totalAmount"/>
+        <result column="STATE" property="cstate"/>
+        <result column="PRO_CNUMBER" property="proCnumber"/>
+        <result column="CPR_CNUMBER" property="cprCnumber"/>
+    </resultMap>
+
+
+
+    <select id="contractAndFind" resultMap="contractC">
+        select c.CONTRACT_ID,c.CUSTOM_NAME,c.CONTRACT_NO,c.INPUT_BY,c.CHECK_BY,c.INSPECTOR,c.SIGNING_DATE,c.DELIVERY_PERIOD,c.SHIP_TIME,c.TOTAL_AMOUNT,c.STATE,pro.CNUMBER as PRO_CNUMBER,cpr.CNUMBER as CPR_CNUMBER
+        from CONTRACT_C c
+        inner JOIN CONTRACT_PRODUCT_C pro
+        on pro.CONTRACT_ID=c.CONTRACT_ID
+        INNER JOIN EXT_CPRODUCT_C cpr
+        on pro.CONTRACT_PRODUCT_ID=cpr.CONTRACT_PRODUCT_ID
+    </select>
+</mapper>

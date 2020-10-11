@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dh_trade_manage:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>dh_trade_manage</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="dh_trade_manage.war">
+      <element id="artifact" artifact-name="dh_trade_manage:war exploded" />
+    </root>
+  </artifact>
+</component>
