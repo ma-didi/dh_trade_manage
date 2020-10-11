@@ -13,4 +13,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IExtEproductCService extends IService<ExtEproductC> {
 
+    int exportAndInsert(String[] contractids);
+
+
 }
