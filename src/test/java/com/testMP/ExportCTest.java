@@ -2,6 +2,7 @@ package com.testMP;
 
 import com.giao.ssm.entity.VO.ExportcVO;
 import com.giao.ssm.mapper.ExportCMapper;
+import com.giao.ssm.service.IExportCService;
 import com.giao.ssm.service.IExtEproductCService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +21,7 @@ import java.util.List;
 public class ExportCTest {
 
     @Autowired
-    private ExportCMapper exportCMapper;
+    private IExportCService exportCService;
 
     @Autowired
     private IExtEproductCService extEproductCService;
@@ -28,7 +29,7 @@ public class ExportCTest {
 
     @Test
     public void exprtCAndFindTest(){
-        List<ExportcVO> andExport = exportCMapper.findAndExport(null);
+        List<ExportcVO> andExport = exportCService.findAndExport();
         andExport.forEach(System.out::println);
     }
 

@@ -24,6 +24,7 @@
         <div class="panel-content">
 			<ul>
 				<li><a href="${ctx}/contract/contractAndFind" onclick="linkHighlighted(this)" target="main" id="aa_1">购销合同</a></li>
+				<li><a href="${ctx}/ssm/export-c/find" onclick="linkHighlighted(this)" target="main" id="aa_1">出口报运</a></li>
 			</ul>
         </div>
         </div>

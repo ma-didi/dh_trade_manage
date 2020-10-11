@@ -4,7 +4,7 @@
 
 
     <resultMap type="com.giao.ssm.entity.VO.ExportcVO" id="exportRM">
-        <id property="id" column="EXPORT_ID"/>
+        <id property="exportId" column="EXPORT_ID"/>
 
         <!-- 虚拟字段 -->
         <result property="epnum" column="EPNUM"/>

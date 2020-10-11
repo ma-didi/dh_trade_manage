@@ -6,8 +6,13 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.Date;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -18,7 +23,8 @@ import lombok.EqualsAndHashCode;
  * @since 2020-10-11
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
+@AllArgsConstructor
+@NoArgsConstructor
 @TableName("EXPORT_C")
 public class ExportC implements Serializable {
 
@@ -28,7 +34,8 @@ public class ExportC implements Serializable {
     private String exportId;
 
     @TableField("INPUT_DATE")
-    private LocalDateTime inputDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date inputDate;
 
     @TableField("CONTRACT_IDS")
     private String contractIds;
