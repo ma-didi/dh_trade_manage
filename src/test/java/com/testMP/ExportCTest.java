@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -46,6 +47,13 @@ public class ExportCTest {
         ExportcVO andExport = exportCService.findAndExportId("a36af32402aa46519879b1a1b52dc06d");
         System.out.println(andExport.toString());
     }
+
+    @Test
+    public void test(){
+        Double a;
+
+    }
+
 
 
 }

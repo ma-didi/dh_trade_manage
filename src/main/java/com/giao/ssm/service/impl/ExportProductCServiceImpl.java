@@ -4,6 +4,7 @@ import com.giao.ssm.entity.ExportProductC;
 import com.giao.ssm.mapper.ExportProductCMapper;
 import com.giao.ssm.service.IExportProductCService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,5 +17,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ExportProductCServiceImpl extends ServiceImpl<ExportProductCMapper, ExportProductC> implements IExportProductCService {
+
+    @Autowired
+    private ExportProductCMapper exportProductCMapper;
+
 
 }
