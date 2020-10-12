@@ -42,9 +42,9 @@ public class ContractController {
 
     @RequestMapping("contractAndFind")
     public String contractAndFind(Model model) {
-        List<ContractC> contractCVOS = contractCService.contractAndFind();
+        List<ContractC> contractCList = contractCService.contractAndFind();
         for (ContractC c :
-                contractCVOS) {
+                contractCList) {
 
             Double aDouble = contractProductCService.contractGettotalAmount(c.getContractId());
             aDouble = Math.round(aDouble * 1000) * 0.001d;
@@ -53,8 +53,25 @@ public class ContractController {
             c.setExtCproductCount(contractProductCService.extcproductGetCount(c.getContractId()));
             c.setContractProductCount(contractProductCService.contractGetCount(c.getContractId()));
         }
-        model.addAttribute("dataList", contractCVOS);
+        model.addAttribute("dataList", contractCList);
         return "cargo/contract/jContractList";
+    }
+
+    @RequestMapping("exportTractAndFind")
+    public String exportTractAndFind(Model model) {
+        List<ContractC> contractCList = contractCService.contractAndFind();
+        for (ContractC c :
+                contractCList) {
+
+            Double aDouble = contractProductCService.contractGettotalAmount(c.getContractId());
+            aDouble = Math.round(aDouble * 1000) * 0.001d;
+            contractCService.contractUpdateAmount(aDouble, c.getContractId());
+            c.setTotalAmount(aDouble);
+            c.setExtCproductCount(contractProductCService.extcproductGetCount(c.getContractId()));
+            c.setContractProductCount(contractProductCService.contractGetCount(c.getContractId()));
+        }
+        model.addAttribute("dataList", contractCList);
+        return "cargo/contract/jExportContractList";
     }
 
 
