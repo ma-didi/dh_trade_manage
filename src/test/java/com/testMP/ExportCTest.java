@@ -1,5 +1,6 @@
 package com.testMP;
 
+import com.giao.ssm.entity.ExportC;
 import com.giao.ssm.entity.VO.ExportcVO;
 import com.giao.ssm.mapper.ExportCMapper;
 import com.giao.ssm.service.IExportCService;
@@ -28,16 +29,23 @@ public class ExportCTest {
 
 
     @Test
-    public void exprtCAndFindTest(){
+    public void exprtCAndFindTest() {
         List<ExportcVO> andExport = exportCService.findAndExport();
         andExport.forEach(System.out::println);
     }
 
 
     @Test
-    public void extEproAndInsert(){
-        String[] i={"c2aa03e4db3a45bbaf9866a536ac59da","992724fbeb3c451ab7d8b9d69f6d68b1"};
+    public void extEproAndInsert() {
+        String[] i = {"c2aa03e4db3a45bbaf9866a536ac59da", "992724fbeb3c451ab7d8b9d69f6d68b1"};
         extEproductCService.exportAndInsert(i);
     }
+
+    @Test
+    public void exproAndFindId() {
+        ExportcVO andExport = exportCService.findAndExportId("a36af32402aa46519879b1a1b52dc06d");
+        System.out.println(andExport.toString());
+    }
+
 
 }

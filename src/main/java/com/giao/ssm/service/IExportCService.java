@@ -15,8 +15,11 @@ import java.util.Map;
  * @author liuchang
  * @since 2020-10-11
  */
-public interface IExportCService extends IService<ExportC> {
+public interface IExportCService extends IService<ExportcVO> {
 
     List<ExportcVO> findAndExport();
+
+    ExportcVO findAndExportId(String id);
+
 
 }

@@ -15,7 +15,7 @@ import java.util.Map;
  * @author liuchang
  * @since 2020-10-11
  */
-public interface ExportCMapper extends BaseMapper<ExportC> {
+public interface ExportCMapper extends BaseMapper<ExportcVO> {
 
     List<ExportcVO> findAndExport(Map map);
 }

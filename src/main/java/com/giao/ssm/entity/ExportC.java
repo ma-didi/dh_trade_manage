@@ -3,14 +3,12 @@ package com.giao.ssm.entity;
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -152,7 +150,8 @@ public class ExportC implements Serializable {
     private String createDept;
 
     @TableField("CREATE_TIME")
-    private LocalDateTime createTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date createTime;
 
 
 }

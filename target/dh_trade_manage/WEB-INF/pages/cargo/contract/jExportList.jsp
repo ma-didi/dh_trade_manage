@@ -15,7 +15,7 @@
                 <div id="navMenubar">
                     <ul>
                         <li id="view"><a href="#" onclick="formSubmit('toview.action','_self');this.blur();">查看</a></li>
-                        <li id="update"><a href="#" onclick="formSubmit('toupdate.action','_self');this.blur();">修改</a>
+                        <li id="update"><a href="#" onclick="formSubmit('${ctx}/ssm/export-c/updateAndId','_self');this.blur();">修改</a>
                         </li>
                         <li id="delete"><a href="#" onclick="formSubmit('delete.action','_self');this.blur();">删除</a>
                         </li>

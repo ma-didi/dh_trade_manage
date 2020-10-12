@@ -3,6 +3,7 @@ package com.giao.ssm.service.impl;
 import com.giao.ssm.entity.ExportC;
 import com.giao.ssm.entity.ExportProductC;
 import com.giao.ssm.entity.ExtEproductC;
+import com.giao.ssm.entity.VO.ExportcVO;
 import com.giao.ssm.mapper.ContractProductVOMapperPO;
 import com.giao.ssm.mapper.ExportCMapper;
 import com.giao.ssm.mapper.ExportProductCMapper;
@@ -69,7 +70,7 @@ public class ExtEproductCServiceImpl extends ServiceImpl<ExtEproductCMapper, Ext
         //工具类，删除最后一个字符
         contractNos = UtilFuns.delLastChar(contractNos);
 
-        ExportC exportC = new ExportC();
+        ExportcVO exportC = new ExportcVO();
         exportC.setExportId(uuid.uuid());
 
         //工具类，拼串
