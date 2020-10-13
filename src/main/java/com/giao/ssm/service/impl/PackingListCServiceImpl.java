@@ -65,15 +65,6 @@ public class PackingListCServiceImpl implements PackingListCService {
 
         packingList.setId(UUID.randomUUID().toString());
         packingList.setState( 0);					//0草稿1已上报
-//        packingList.setCreateBy("默认");
-//        packingList.setCreateDept("默认");
-//        Date date = new Date();
-//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-//        System.out.println(formatter.format(date));
-
-//        packingList.setCreateTime(date);
-//        packingListCMapper.insert(packingList);
-
         return packingListCMapper.insert(packingList);
     }
 

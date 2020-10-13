@@ -3,8 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title></title>
+	<link href="${ctx}/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
-
+<script src="${ctx}/webjars/jquery/3.3.1/jquery.js"></script>
+<script src="${ctx}/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
 <body>
 <form name="icform" method="post">
 
@@ -74,6 +76,7 @@
 	</c:forEach>
 	
 	</tbody>
+	
 </table>
 </div>
  

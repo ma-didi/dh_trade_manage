@@ -5,6 +5,8 @@ import com.giao.ssm.entity.VO.ExportcVO;
 import com.giao.ssm.mapper.ExportCMapper;
 import com.giao.ssm.service.IExportCService;
 import com.giao.ssm.service.IExtEproductCService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +37,22 @@ public class ExportCTest {
         andExport.forEach(System.out::println);
     }
 
+
+    public PageInfo findPage(int page,int pageSize){
+        PageHelper.startPage(1,1);
+        List<ExportcVO> andExport = exportCService.findAndExport();
+        PageInfo exportcVOPageInfo = new PageInfo(andExport);
+        return exportcVOPageInfo;
+    }
+
+
+    @Test
+    public void findAndTestPage(){
+        PageInfo page = findPage(1, 2);
+        List list = page.getList();
+        System.out.println(page);
+        list.forEach(System.out::println);
+    }
 
     @Test
     public void extEproAndInsert() {

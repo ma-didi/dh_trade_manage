@@ -1,6 +1,9 @@
 package com.giao.ssm.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.pagination.DialectModel;
+import com.baomidou.mybatisplus.extension.plugins.pagination.dialects.IDialect;
+import com.github.pagehelper.PageInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,6 +16,7 @@ public class MybatisPlusConfig {
 
     @Bean("paginationInterceptor")
     public PaginationInterceptor paginationInterceptor(){
-        return new PaginationInterceptor();
+        PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+        return paginationInterceptor;
     }
 }
