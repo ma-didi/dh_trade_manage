@@ -11,6 +11,5 @@
 		<package name="com.giao.ssm.pojo"/>
 	</typeAliases>
 
-
 </configuration>
 
