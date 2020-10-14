@@ -17,6 +17,6 @@
 * 决策分析
 
 ##项目技术
-SpringMVC、Spring、Mybatis-plsu
+SpringMVC、Spring、Mybatis-plsu、Oracle
 
 
