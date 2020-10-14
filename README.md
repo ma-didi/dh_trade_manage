@@ -16,5 +16,7 @@
 * 货运全流程管理
 * 决策分析
 
+##项目技术
+SpringMVC、Spring、Mybatis-plsu
 
 
