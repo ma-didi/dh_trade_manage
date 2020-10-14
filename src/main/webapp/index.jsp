@@ -9,7 +9,7 @@
 <% response.sendRedirect("login/loginTo");%>
 <html>
 <head>
-    <title>Title</title>
+    <title>首页</title>
 </head>
 <body>
 
